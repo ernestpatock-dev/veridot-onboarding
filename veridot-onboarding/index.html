@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VeriDot Onboarding</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>VeriDot Onboarding</h1>
+      <p class="lead">Connect wallet • See VDT balance • Admin minting (owner only)</p>
+    </header>
+
+    <section class="card">
+      <button id="connectBtn">Connect Wallet</button>
+      <p id="addr" class="muted">Not connected</p>
+      <div class="grid">
+        <div class="stat">
+          <h4 id="symbol">VDT</h4>
+          <p class="muted">Token</p>
+        </div>
+        <div class="stat">
+          <h4 id="balance">0</h4>
+          <p class="muted">Your Balance</p>
+        </div>
+        <div class="stat">
+          <h4 id="totalSupply">0</h4>
+          <p class="muted">Total Supply</p>
+        </div>
+      </div>
+      <div id="ownerArea" class="owner hidden">
+        <h4>Owner Controls</h4>
+        <input id="mintTo" placeholder="Recipient address (0x...)" />
+        <input id="mintAmount" placeholder="Amount (VDT units)" />
+        <button id="mintBtn" class="primary">Mint Tokens</button>
+        <p class="muted tiny">Mint transactions require MetaMask confirmation and owner signature.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>How to contribute (Quick)</h3>
+      <p>Paybill: <strong>247247</strong> | A/C: <strong>232477</strong> | A/C Name: <strong>ERNEST KURIA MWANGI</strong></p>
+      <p class="muted tiny">After payment: submit form with wallet address. Tokens are allocated on-chain.</p>
+    </section>
+
+    <footer class="muted tiny">© VeriDot</footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const script = document.createElement("script");
+    script.src = "app.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+</body>
+</html>
